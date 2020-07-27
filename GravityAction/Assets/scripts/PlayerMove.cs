@@ -9,7 +9,8 @@ public class PlayerMove : MonoBehaviour
     public GameObject player;
     Animator animPlayer;
     private bool reachFlag = false;
-    private bool isdamege = false;
+    public bool isdamege = false;
+    private bool invokeCheck = false;
 
     void Start()
     {
@@ -21,29 +22,31 @@ public class PlayerMove : MonoBehaviour
         if (isdamege == false)
         {
             transform.position += new Vector3(-0.15f, 0, 0);
+            invokeCheck = false;
         }
         else
         {
-            animPlayer.SetBool("isCollision",true);
-            Invoke("setFalse", 4);
-
+            if (invokeCheck == false)
+            {
+                Invoke("setFalse", 4);
+                invokeCheck = true;
+            }
         }
+
+        //天井か地面についていないと重力反転できないようにする。
         Gravity grav = GetComponent<Gravity>();
         if (Input.GetKeyDown(KeyCode.Space) && reachFlag == true) {
             if (isReverse == true)
             {
                 animPlayer.SetBool("isFloating", false);
                 grav.setFalse();
-                isReverse = false;
-                
-                
+                isReverse = false;  
             }
             else
             {
                 animPlayer.SetBool("isFloating", true);
                 grav.setTrue();
                 isReverse = true;
-               
             }
         }
     }
@@ -64,11 +67,12 @@ public class PlayerMove : MonoBehaviour
 
     public void setTrue()
     {
-        isdamege = true;
+            isdamege = true;
+        Debug.Log("saaaaa");
     }
     public void setFalse()
     {
-        isdamege = false;
         animPlayer.SetBool("isCollision", false);
+        isdamege = false;
     }
 }

@@ -21,10 +21,9 @@ public class SceneManagementSystem : MonoBehaviour
             AudioSource.PlayClipAtPoint(StartButtonSound, Camera.main.transform.position);
             Invoke("LoadScene", 3);
         }
-
     }
     private void LoadScene()
     {
-        SceneManager.LoadScene("Stage1");
+        SceneManager.LoadScene("Menu");
     }
 }
