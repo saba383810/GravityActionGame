@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{E2D39381-8B77-3AB4-4A8E-7F64DC21B54C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/PlayerMove.cs">
+    <Files>
+      <File FileName="Assets/scripts/CameraMove.cs" Line="21" Column="55" />
+      <File FileName="Assets/scripts/Gravity.cs" Line="21" Column="63" />
+      <File FileName="Assets/scripts/PlayerHealth.cs" Line="8" Column="31" />
+      <File FileName="Assets/scripts/PlayerMove.cs" Line="23" Column="52" />
+      <File FileName="Assets/scripts/SceneManagementSystem.cs" Line="28" Column="42" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ReverseAction" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="87172e2e-8420-43aa-ad49-1ce0525f36c8" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
