@@ -7,17 +7,24 @@ public class PlayerHealth : MonoBehaviour
 	public GameObject effectPrefab;
 	public AudioClip damageSound;
 	public AudioClip destroySound;
-	AudioSource audioSource;
+	public AudioClip clearsound;
+	public AudioClip gameoversound;
 	public int playerHP = 3;
-	public GameObject[] playerIcons;
+	
 	public Rigidbody rb;
+	public GameObject gameOverPanel;
+	public GameObject clearPanel;
+	public GameObject[] playerIcons;
 	Animator animPlayer;
+	AudioSource audioSource;
 
 
 	void Start()
 	{
 		animPlayer = GetComponent<Animator>();
 		audioSource = GetComponent<AudioSource>();
+		gameOverPanel.SetActive(false);
+		clearPanel.SetActive(false);
 	}
 
 
@@ -41,13 +48,19 @@ public class PlayerHealth : MonoBehaviour
 			audioSource.PlayOneShot(damageSound);
 			if (playerHP == 0)
 			{
-				//GameObject effect = Instantiate(effectPrefab, transform.position, Quaternion.identity);
-				//Destroy(effect, 1.0f);
-				//AudioSource.PlayClipAtPoint(destroySound, Camera.main.transform.position);
-				Invoke("charactorDestroy", 2);
-				
+				Invoke("charactorDestroy", 1);
+				audioSource.PlayOneShot(gameoversound);
+				gameOverPanel.SetActive(true);
 			}
 		}
+		if (col.gameObject.tag == "Goal")
+		{
+			charactorDestroy();
+			audioSource.PlayOneShot(clearsound);
+			clearPanel.SetActive(true);
+		}
+
+
 		UpdatePlayerIcons();
 
 	}

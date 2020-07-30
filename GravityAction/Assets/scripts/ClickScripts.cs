@@ -17,8 +17,21 @@ public class ClickScripts : MonoBehaviour
         
     }
 
+   
+    public void gameSelectButtonClick()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void startButtonClick()
+    {
+        SceneManager.LoadScene("Start");
+    }
     public void Stage1ButtonClick()
     {
         SceneManager.LoadScene("Stage1");
+    }
+    public void Stage2ButtonClick()
+    {
+        SceneManager.LoadScene("Stage2");
     }
 }

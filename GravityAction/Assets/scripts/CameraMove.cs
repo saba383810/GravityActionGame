@@ -15,9 +15,9 @@ public class CameraMove : MonoBehaviour
     void Update()
     {
         float posx = player.transform.position.x;
-        float posy = 5;
+        float posy = player.transform.position.y;
         float posz = player.transform.position.z;
 
-        transform.position = new Vector3(posx -5, posy, posz + 20);
+        transform.position = new Vector3(posx-5, posy+5, posz + 20);
     }
 }

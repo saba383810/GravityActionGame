@@ -8,6 +8,7 @@ TagManager:
   - obstacle
   - groundUp
   - GroundDown
+  - Goal
   layers:
   - Default
   - TransparentFX

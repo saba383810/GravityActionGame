@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    public GameObject goalObject; 
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,6 @@ public class Goal : MonoBehaviour
     }
 	private void OnCollisionEnter(Collision col)
 	{
-		
+        
 	}
 }

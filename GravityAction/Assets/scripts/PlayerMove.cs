@@ -28,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (invokeCheck == false)
             {
-                Invoke("setFalse", 4);
+                Invoke("setFalse", 4.2f);
                 invokeCheck = true;
             }
         }
@@ -67,8 +67,7 @@ public class PlayerMove : MonoBehaviour
 
     public void setTrue()
     {
-            isdamege = true;
-        Debug.Log("saaaaa");
+        isdamege = true;
     }
     public void setFalse()
     {
