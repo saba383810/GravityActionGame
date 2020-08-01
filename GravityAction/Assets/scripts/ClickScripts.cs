@@ -34,4 +34,12 @@ public class ClickScripts : MonoBehaviour
     {
         SceneManager.LoadScene("Stage2");
     }
+    public void Stage3ButtonClick()
+    {
+        SceneManager.LoadScene("Stage3");
+    }
+    public void Stage4ButtonClick()
+    {
+        SceneManager.LoadScene("Stage4");
+    }
 }

@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
 		}
 		if (col.gameObject.tag == "Goal")
 		{
-			charactorDestroy();
+			Invoke("charactorDestroy", 1);
 			audioSource.PlayOneShot(clearsound);
 			clearPanel.SetActive(true);
 		}
@@ -71,7 +71,6 @@ public class PlayerHealth : MonoBehaviour
 
 	void UpdatePlayerIcons()
 	{
-		// for文（繰り返し文）・・・まずは基本形を覚えましょう！
 		for (int i = 0; i < playerIcons.Length; i++)
 		{
 			if (playerHP <= i)
